@@ -54,3 +54,11 @@ WHERE category = "Kitchen Supplies";
 SELECT AVG(price)
 FROM superstore
 WHERE category = "Furnishings";
+
+--How many items in category "Furnishings" are below $200
+
+SELECT COUNT(stock_quantity), category, item_name, price
+FROM superstore
+WHERE category = "Furnishings"
+AND price < 200
+ORDER BY price DESC;
